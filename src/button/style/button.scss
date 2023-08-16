@@ -1,0 +1,24 @@
+@use './button-config.scss';
+@import './button-base.scss';
+@import "./button-mixin.scss";
+
+.s-btn {
+  // 导入button基础样式
+  @include button-base;
+
+  // 导入type相关的样式
+  @include button-variant(button-config.$type);
+  
+  // 导入hover等伪类样式
+  @include button-variant(button-config.$pseudo, true);
+  // 导入size相关样式
+  @include button-variant(button-config.$size);
+  // 按钮禁用样式
+  &[disabled] {
+    cursor: not-allowed;
+  };
+  // 块级按钮样式
+  &.s-btn--block {
+   @apply block w-full
+  };
+}

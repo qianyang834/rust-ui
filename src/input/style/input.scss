@@ -1,0 +1,8 @@
+@import '../../../src/style/variable.scss';
+  .s-input {
+    /* your component style */
+    @apply 
+    border-solid border-2; 
+    border-radius: $s-border-radius;
+    border-color: $s-primary;
+  }
